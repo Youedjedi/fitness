@@ -1,0 +1,30 @@
+<section >
+<form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)" fxLayoutGap="10px">
+    <mat-form-field>
+       <input type="email" matInput ngModel name="user"
+       email
+       required
+       #email="ngModel"
+       >
+       <mat-label>Inserer votre login</mat-label>
+       <mat-error *ngIf="email.hasError('required')">Inserer votre login SVP</mat-error>
+       <mat-error *ngIf="!email.hasError('required')">Format incorrect !!</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="password" matInput  ngModel name="password">
+            <mat-label>Inserer votre password</mat-label>
+             </mat-form-field>
+             <mat-form-field>
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-checkbox color="primary"> J'approuve les Terms et les conditions </mat-checkbox>
+             <button mat-raised-button type="submit" color="primary" [disabled]="f.invalid"> Valider</button>
+
+</form>
+
+</section>

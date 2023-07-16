@@ -1,0 +1,36 @@
+<mat-sidenav-container class="example-container" >
+    <mat-sidenav mode="side" #appsidenav >
+        <mat-nav-list>
+            <a mat-list-item routerLink="/signup" (click)="appsidenav.toggle()"> Signup</a>
+       
+         
+            <a mat-list-item routerLink="/login"  (click)="appsidenav.toggle()"> Login</a>
+        
+        
+            <a mat-list-item routerLink="/training" (click)="appsidenav.toggle()"> Training</a>
+        </mat-nav-list>
+          
+     </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button class="example-icon"  (click)="appsidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button>
+           <div> <a routerLink="/"><span>My App</span> </a></div>
+         <div fxFlex> </div>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+              <a routerLink="signup"></a>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>share</mat-icon>
+            </button>
+          </mat-toolbar>
+        <main>
+        <router-outlet>
+
+        </router-outlet>
+    </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

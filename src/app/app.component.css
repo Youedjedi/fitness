@@ -1,0 +1,23 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-sidenav-container , mat-sidenav,mat-sidenav-content {
+
+    height: 100%;
+  }
+
+  mat-sidenav{
+    width: 200px;
+
+   
+  }
+  a {
+   text-decoration: none; 
+   color: white;
+  }
+  a:hover , a:active
+  {
+    color : aqua;
+  }
+
